@@ -9,21 +9,17 @@
 Console.WriteLine("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (NaturalNumbersChecking(number))
-{
-    Console.Write("( ");
-    NaturalNumbers(number);
-    Console.WriteLine(")");
-}
+if (NaturalNumbersChecking(number)) NaturalNumbers(number);
 else Console.WriteLine("Isn't natural number");
 
 
 void NaturalNumbers(int num)
 {
     if (num == 0) return;
-    Console.Write($"{num} " + ", ");
-    NaturalNumbers(num - 1);
-
+    {
+        Console.Write($"{num} ");
+        NaturalNumbers(num - 1);
+    }
 }
 
 bool NaturalNumbersChecking(int num1)
