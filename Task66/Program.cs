@@ -15,7 +15,7 @@ Console.WriteLine("Please input Numbe: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
 int result = SumOfNaturalNumbers(numberM, numberN);
-if (NaturalNumbersChecking(numberM, numberN)) Console.Write(result);
+if (IsNaturalNumbers(numberM, numberN)) Console.Write(result);
 else Console.WriteLine("Number's type error");
 
 int SumOfNaturalNumbers(int num1, int num2)
@@ -29,7 +29,7 @@ int SumOfNaturalNumbers(int num1, int num2)
     return num1;
 }
 
-bool NaturalNumbersChecking(int num1, int num2)
+bool IsNaturalNumbers(int num1, int num2)
 {
     return (num1 > 0 && num2 > 0);
 }
